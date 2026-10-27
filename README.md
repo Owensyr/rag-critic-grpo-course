@@ -13,9 +13,7 @@
 | SFT CLM | 同上 | 五数据集 10K 批判语料微调的 CLM8B | **0.51311** | +4.929 个百分点 |
 | SFT CLM + GRPO | 同上 | CLM8B 上新增 GRPO LoRA，step016 | **0.51523** | +0.212 个百分点 |
 
-分数由实验执行者于 2026-10-27 提供，见 [成绩记录](results/kaggle_scores.json)。四组都提交 12,576 条完整 Qwen 回答。没有取得 Kaggle 内部评分代码；新训练的权重、采样输出和成绩不保证与历史运行相同。特别是新的 RL 选题不依赖我们早期 reward32/smoke 的私有选题文件，因此不是历史 pilot 的逐题重放。
-
-![四组历史成绩](results/kaggle_scores.png)
+分数由实验执行者于 2026-10-27 提供。四组都提交 12,576 条完整 Qwen 回答。没有取得 Kaggle 内部评分代码；新训练的权重、采样输出和成绩不保证与历史运行相同。特别是新的 RL 选题不依赖我们早期 reward32/smoke 的私有选题文件，因此不是历史 pilot 的逐题重放。
 
 基线使用数据中提供的检索文档，并非闭卷回答。后三组各进行一次批判、一次修订，然后按固定预算结束；本实验没有在线重新检索或质量驱动的自适应停止。GRPO 的小幅提升是单次观察，不构成多种子显著性结论。
 
@@ -282,20 +280,19 @@ python3 tools/export_submission.py \
   --output runs/rl_full/submission_copy.csv
 ```
 
-## 8. 检查、结果与历史备份
+## 8. 检查与代码导航
 
 ```bash
 python3 tools/check_release.py --verify-manifest
 python3 -m unittest discover -s tests -v
 ```
 
-当前新入口通过 CPU 测试及本地真实数据准备验证；没有在本机 Windows 上重新执行 GPU 训练、合并或推理。新增验证记录见 [从头运行验证](provenance/from_scratch_validation.json)。历史四组已在服务器完成；便携入口的新运行仍需在读者 GPU 环境验证。不同模型 revision、生成采样、批次、浮点计算和引擎配置都会影响结果。
+当前新入口通过 CPU 测试及本地真实数据准备验证；没有在本机 Windows 上重新执行 GPU 训练、合并或推理。历史四组已在服务器完成；便携入口的新运行仍需在读者 GPU 环境验证。不同模型 revision、生成采样、批次、浮点计算和引擎配置都会影响结果。
 
-- [实现与实验报告](docs/实现与实验报告.md)：同学写报告/PPT用的算法、实现和历史实验说明。
-- [报告与PPT写作提纲](docs/报告与PPT写作提纲.md)：报告章节、幻灯片提纲。
-- [代码导航与复现范围](docs/代码导航与复现范围.md)：新入口与历史代码对应关系。
-- [历史服务器备份说明](docs/服务器文件下载与部署.md)：仅供原实验归档/恢复；私有包不是本 README 的前置条件。
+[代码导航与复现范围](docs/代码导航与复现范围.md) 列出各模块、入口和验证边界。[源码来源清单](provenance/source_inventory.json) 与 [发布文件清单](provenance/release_files.json) 用于源码完整性校验。
 
-训练与评测使用数据中已有的检索文档，没有新增在线检索。SFT 的 ASQA 部分支持口径、原论文与课程实验差异、GRPO 小规模训练和推理引擎差异均见详细报告。
+本仓库保留代码、运行文档、依赖、测试和完整性清单；详细课程报告、PPT 写作材料、结果图片及作图数据单独保存。程序运行时仍会在 `runs/` 下生成日志、训练指标和评测结果，这些文件供读者诊断自己的实验，不提交到仓库。
+
+训练与评测使用数据中已有的检索文档，没有新增在线检索。这里保留了 ASQA 部分支持口径、四卡 LoRA 配置和小规模 GRPO 设置。SFT 评测沿用旧推理引擎设置，RL 评测使用 eager、并发 32、关闭 prefix cache；四组历史成绩并非严格隔离引擎因素的消融实验。
 
 上游：[RAG-ReasonAlignment](https://github.com/upup-wei/RAG-ReasonAlignment)，历史代码提交 `11ab28179d6cbd0d0c4cb491a6fd3e1b1c53536a`。来源和授权范围见 [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md)。基础模型、作者数据和课程数据按各自来源条件使用。

@@ -8,6 +8,7 @@ private/
 /data/
 runs/
 models/
+/results/
 **/artifacts/
 **/logs/
 **/prepared/
@@ -18,4 +19,3 @@ models/
 *.tar.gz
 *.zip
 *.csv
-!results/kaggle_scores.csv
