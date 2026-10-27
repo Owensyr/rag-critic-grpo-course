@@ -1,0 +1,44 @@
+V3 更新说明（2026-10-26）
+
+V2 服务器报告：53/56，原 40 条 39/40，新增 16 条 14/16。原来的三个失败样例通过，
+新失败包括两个国家关系否定问句和一个名字后缀问题。未开始任何 RL 参数更新。
+
+V3 更改
+1. 对可以完整识别的简单两实体国家关系句，用真值表转换为相对问句的 yes/no。
+   不根据题号或标准答案里的实体编写特例。遇到多句、转折、其他实体、时态不符等，交给原来的语义评分。
+2. 名字只有代际后缀差异、而参考答案没有该明确别名时，标记为无法确认身份。
+   不奖励，也不强行判错；相应训练组排除。原 case40 期望值未修改，仍计为未通过。
+3. 校验改为和训练实际调用相同的混合评分流程，纯 Qwen 输出另外完整保留。
+   原两套样例分别至少 95%、关键样例全部通过的数值要求不变。
+   注意：校验对象发生变化，不能说纯 Qwen 的原有错误已全部解决。
+4. 训练数据、模型、优化器、生成参数和 v2 Qwen 判分提示词未改。
+
+本地验证
+22 项测试通过，覆盖国家关系正反逻辑、复杂句回退、后缀歧义、缓存、阶段恢复等。
+使用 v2 保存的模型输出回放，混合评分 55/56，关键样例全部通过。
+这只是离线回放，不是一次新的模型运行；56 条为开发样例，不能当作独立测试准确率。
+纯 Qwen 已有诊断仍是 53/56。服务器必须重新校验后才能训练。
+
+上传 clm_rl_grpo_pilot_v3.tar.gz 到 ~/RAG/，旧目录及记录保留，不复制旧缓存。
+
+cd ~/RAG
+tar -xzf clm_rl_grpo_pilot_v3.tar.gz
+cd clm_rl_grpo_pilot_v3
+mkdir -p logs
+set -o pipefail
+CUDA_VISIBLE_DEVICES=0,1,2,3 ~/RAG/clm_training_env/bin/python -u run.py reward-check 2>&1 | tee logs/reward_check_driver.log
+
+查看详细日志：
+tail -n 90 logs/reward_calibration.log
+
+只有日志出现 REWARD_CALIBRATION_OK 且 reports/reward_calibration.json 的 status 为 passed 时再启动：
+nohup env CUDA_VISIBLE_DEVICES=0,1,2,3 ~/RAG/clm_training_env/bin/python -u run.py all > logs/pipeline.log 2>&1 < /dev/null &
+
+查看进度：
+~/RAG/clm_training_env/bin/python run.py status
+tail -f logs/pipeline.log
+
+校验或训练结束后均自动生成报告：
+~/RAG/clm_rl_grpo_pilot_v3/clm_rl_grpo_pilot_v3_reports.tar.gz
+下载到本地 RAG/server_results/复现/CLM/。若失败，不降低门槛，提供该报告进一步检查。
+该包不含模型权重，不需重装环境、重下模型或重做 SFT。全量 Kaggle 评测在小规模实验检查后再运行。

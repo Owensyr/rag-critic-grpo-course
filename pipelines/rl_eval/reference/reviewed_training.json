@@ -1,0 +1,79 @@
+{
+  "training_run_fingerprint": "783f2d899177aa44b1446cf7334acfaadd14a8f09c8d484b780da7ab6a4c207d",
+  "training_report_sha256": "94b6e185a9894e7d8798ed2cf99e445989b2651a95b51d0f2b3245501c0447ab",
+  "training_files_sha256": {
+    "artifacts/spec.json": "b796bc5db6dbbd9056cf837e397884c24daf2270c8a32d06a21970ec2dda1cb6",
+    "artifacts/status.json": "0f3300b1f7c0a1fadf17213128a125582038d6df1686b04a931064649062642b",
+    "reports/summary.json": "c6631f1b29f44c7eb043688663c89fe97a78957e8d11d1a7a1aadf6511514b2e",
+    "artifacts/stages/round16_update.json": "e798aba7d43f5366d8b98403931cedaf5f0e2f31edc0694f3eadabbd77f63e39"
+  },
+  "checkpoint_files_sha256": {
+    "artifacts/checkpoints/step016/README.md": "0b50347696d8b39ac49f1e6f17c1a4042e1f22a273923daafc46ec04b70ee6ca",
+    "artifacts/checkpoints/step016/adapter_config.json": "1e6ea82a6dfe7e0cad94f682369fc417f770d74899a01ca263ea978fe6878107",
+    "artifacts/checkpoints/step016/adapter_model.safetensors": "89d30d081e628a4c34d571f76a9bcdb38a83366150bda95d554732004d680a18",
+    "artifacts/checkpoints/step016/optimizer.pt": "837f5e900bcd5feee573ec05c42faa433fbdcefb48aabf3b3e7f6507434ab989",
+    "artifacts/round16/update_rank0.json": "7572be8fb2169e4f08048f581bf8a6076ccb2baeb25e1c70ca707c77a7fa3329",
+    "artifacts/round16/update_rank1.json": "a4d696a95823650dbabe1da84d19d55add49623b17ba1fbef28d2d6064e039f9",
+    "artifacts/round16/update_rank2.json": "d55f5ccbb7e2da874417f947308eba2351762c6a4921b23dbeab52b43d22ca27",
+    "artifacts/round16/update_rank3.json": "67730833364d3966542670ab9154d7d2e31ef4bd02e53511edc3f0230a63eb70"
+  },
+  "sft": {
+    "status": "complete",
+    "base": "/home/zengyufan/RAG/models_verified/meta-llama/Llama-3.1-8B-Instruct",
+    "adapter": "/home/zengyufan/RAG/clm_training_step5/artifacts/full",
+    "output": "/home/zengyufan/RAG/clm_step6_2wiki/models/Llama-3.1-8B-Instruct-CLM-original10k",
+    "adapter_sha256": "f0c8979757af7dffd41635eb61387902a7d367f73730c9bc31855cc2b8388343",
+    "source_sha256": "c500875fc40020ea3fe302e8797deb4512a46c92e54ab5150d52e16f9928de72",
+    "started_utc": "2026-10-23T13:36:10.610431+00:00",
+    "config": {
+      "model_name_or_path": "/home/zengyufan/RAG/models_verified/meta-llama/Llama-3.1-8B-Instruct",
+      "adapter_name_or_path": "/home/zengyufan/RAG/clm_training_step5/artifacts/full",
+      "template": "llama3",
+      "finetuning_type": "lora",
+      "trust_remote_code": false,
+      "infer_dtype": "bfloat16",
+      "export_dir": "/home/zengyufan/RAG/clm_step6_2wiki/models/Llama-3.1-8B-Instruct-CLM-original10k",
+      "export_size": 4,
+      "export_device": "cpu",
+      "export_legacy_format": false
+    },
+    "tensor_numel": 8030261248,
+    "changed_weight_elements": {
+      "model.layers.0.self_attn.q_proj.weight": 10255367,
+      "model.layers.15.self_attn.q_proj.weight": 8615204,
+      "model.layers.31.self_attn.q_proj.weight": 9378180
+    },
+    "files_sha256": {
+      "Modelfile": "785862227631976533b7ea9f31e141fcfd5772e0acf4f30613de1a64e288adfd",
+      "config.json": "fd86b50b4e2726fe070625cde63114bccda7757e4a7e47909eaac3ed194e69bd",
+      "generation_config.json": "f62859b817ec0ad72540dfb2e2ae64fb70b3a8ffd7fad503193fa76e64b80227",
+      "model-00001-of-00005.safetensors": "3aa04dbac718e54f3711e692fde49c8235096a12e8429def8038ac3beef37f8f",
+      "model-00002-of-00005.safetensors": "fbabf65a46217d5b81b0f54a5fb8d052bc5c0f7fe9b64c35789ba0ff6800229f",
+      "model-00003-of-00005.safetensors": "01f7d14d84add5499d9598e8ec3276d1453ebfcd2ba261b83801344f8d97a4ae",
+      "model-00004-of-00005.safetensors": "4a1a7d39994c524b7225b2ed3f8b807eb134806f2fd70ff74ee36e8b0bd91ffe",
+      "model-00005-of-00005.safetensors": "5321ca97dd0968a3e2b676b3a42728e9f5327d516bcf0addd4e9cd61c068a1ad",
+      "model.safetensors.index.json": "f7baf4093152f6142250ecd3c72cbfe6c4816f18e28bc577ffcba3c73709f071",
+      "special_tokens_map.json": "994823bd9d0de3b2f59f09f6502a65a228954ca8e5b711534988deb083c37449",
+      "tokenizer.json": "6b9e4e7fb171f92fd137b777cc2714bf87d11576700a1dcd7a399e7bbe39537b",
+      "tokenizer_config.json": "168a688c2eef79c0ea64a08c3d3332e21f8605b1bbea1bacfdc1fbf68527ad5a"
+    },
+    "completed_utc": "2026-10-23T13:37:49.052621+00:00"
+  },
+  "qwen": {
+    "LICENSE": "832dd9e00a68dd83b3c3fb9f5588dad7dcf337a0db50f7d9483f310cd292e92e",
+    "README.md": "f366f33bbf6bcadbb7d87f0a21a7b65584a56b8d58b0743c77c88bee625b93a6",
+    "config.json": "7463bb0ea78315365e6c6b74de4e73bbcc8359dfb0c5a737584e077d42c0b03c",
+    "configuration.json": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+    "generation_config.json": "3a8f9087e486054c8a4a08dae2e5a3ba62e23da212b5b8c08bc42cb983c3459f",
+    "model-00001-of-00004.safetensors": "a1333e6293854747c481288ea83b348226af178dd565c49b6f9495ba1966aba7",
+    "model-00002-of-00004.safetensors": "f5d25a2772cb825164a2a2c0fb6d51a87e282abf21e4dd75bc5cfb3cd0ea6185",
+    "model-00003-of-00004.safetensors": "8efdec4c1bc12317ae1a38dc42b595ce777738a64deea3fcb8a0a91381bcdfd5",
+    "model-00004-of-00004.safetensors": "1a72d403cdf0c1ec3cb7f289f17b394a01e64394c2e9b3c0f94dbce3faf879bd",
+    "model.safetensors.index.json": "624bf7c47cd12468fdc16e38a47cf4f19e0415b859a223ba3c027eed2f0e1028",
+    "tokenizer.json": "c0382117ea329cdf097041132f6d735924b697924d6f6fc3945713e96ce87539",
+    "tokenizer_config.json": "5b5d4f65d0acd3b2d56a35b56d374a36cbc1c8fa5cf3b3febbbfabf22f359583",
+    "vocab.json": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910"
+  },
+  "optimizer_steps": 15,
+  "rounds": 16
+}

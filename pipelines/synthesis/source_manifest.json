@@ -1,0 +1,19 @@
+{
+  "upstream_commit": "11ab28179d6cbd0d0c4cb491a6fd3e1b1c53536a",
+  "asqa_policy": "any_subquestion_answer_present",
+  "asqa_policy_explicit_user_choice": "2026-10-23",
+  "original_author_corpus": false,
+  "files_sha256": {
+    "build.py": "00f9d52601ac4d3a6a33d2df2f496ee40cb0105504f5b665fb75dc816acfd2f7",
+    "README.txt": "7aacef99ba4b4ddf8e521d87a40e269a8b6e19a9f845f0dcffe7d38248c97fc6",
+    "run.py": "7ed0c5ad0f651639890c1abc928855bf9b74f579c9b05af9de54a68a9decc505",
+    "author/data_generation.yaml": "eeb5021080e4bd13eda33f5599745332f5155bcbdd0bdb8bfe38a100a56b32d0",
+    "author/data_prompt.py": "5ac745a40dd1cac229aab61ab61b83914ff644c325af5f374d3d1a9e80ca96af",
+    "author/metrics.py": "fb773ea8191a38f043f791cfaf738d4350c5c723a7c9da38b2b50915581d9e5e",
+    "author/rag.json": "95cc92b568d0fd49b2dbfc34e5f874c14b7073e4cf3465522ac262f4e0a1a1a5",
+    "author/train_data_critic.py": "8b13d620079b1d9ac19d1d3876eb9fa1d0fd4071848a6cf3c266e8072d4c8507",
+    "data/build_report.json": "fd1383bfe0e17b8a9fe759d5075c00f4f2c67747cfb77e8d83380cb1099c79b7",
+    "data/selection_preview70.json": "ec5ab8742043028be67dd1afd8a37e5a6e68bf625c532139dd2b699f8c0ddf3d",
+    "data/train_10k.jsonl": "9922932781ea8b623a67a83edb705196d24689bb5354e722d705c503a6c94e72"
+  }
+}

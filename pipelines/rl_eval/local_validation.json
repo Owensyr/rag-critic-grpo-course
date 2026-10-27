@@ -1,0 +1,24 @@
+{
+  "status": "passed",
+  "protocol_tests": 11,
+  "python310_syntax": true,
+  "full_rationale_round_trip_rows": 12576,
+  "matches_existing_qwen_submission": true,
+  "original_author_templates_preserved": true,
+  "real_gpu_test": false,
+  "real_lora_probe": false,
+  "limitations": "CPU tests including direct full orchestration with no smoke or probe artifacts. Server inference is not run locally. Provenance, registry and request-routing checks remain. Probability-probe inconclusive is not rewritten as passed.",
+  "v1_missing_output_metadata_regression": true,
+  "registry_failure_and_conflict_checks": true,
+  "unchanged_files": [
+    "shared.py",
+    "eval/inference_vllm.py",
+    "eval/data_prompt.py",
+    "configs/eval.yaml",
+    "reference/reviewed_training.json"
+  ],
+  "probability_probe_required": false,
+  "prior_smoke_required": false,
+  "direct_full_without_prior_artifacts_test": true,
+  "standalone_probe_inconclusive_nonblocking": true
+}

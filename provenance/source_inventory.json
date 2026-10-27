@@ -1,0 +1,472 @@
+{
+  "upstream_repository": "https://github.com/upup-wei/RAG-ReasonAlignment",
+  "upstream_commit": "11ab28179d6cbd0d0c4cb491a6fd3e1b1c53536a",
+  "copied_without_modification": [
+    {
+      "path": "pipelines/qwen/configs/eval.yaml",
+      "source": "author_alignrag_course/course/configs/eval.yaml",
+      "sha256": "2dd444b979188caffc3fba5aef89d0b2cc56f64cb7b520c53415f847eed0fe57"
+    },
+    {
+      "path": "pipelines/qwen/eval/common_utils.py",
+      "source": "author_alignrag_course/course/eval/common_utils.py",
+      "sha256": "b4781f89143394815d7b20d2de53e9f61c3522074e601736e7288dded59e354c"
+    },
+    {
+      "path": "pipelines/qwen/eval/data_prompt.py",
+      "source": "author_alignrag_course/course/eval/data_prompt.py",
+      "sha256": "c517f63dbd61802b0a821283ccba293c2aff9068abcd749b054d5f4182c6fafd"
+    },
+    {
+      "path": "pipelines/qwen/eval/data_utils.py",
+      "source": "author_alignrag_course/course/eval/data_utils.py",
+      "sha256": "48126ebf6cdcf59d3ff381d07c5a4316323ff3d4a033d0b1f07ce280ff2c1f5f"
+    },
+    {
+      "path": "pipelines/qwen/eval/inference_vllm.py",
+      "source": "author_alignrag_course/course/eval/inference_vllm.py",
+      "sha256": "b3e26109f559df977cdbea3c69aaa427928b78f4a79f10cb6d38675f5c269401"
+    },
+    {
+      "path": "pipelines/qwen/eval/log_utils.py",
+      "source": "author_alignrag_course/course/eval/log_utils.py",
+      "sha256": "f35d8cf7d889c656e75b27384df0b15f3ba6e946973f02f410c31eb98ccee7d8"
+    },
+    {
+      "path": "pipelines/qwen/eval/metrics.py",
+      "source": "author_alignrag_course/course/eval/metrics.py",
+      "sha256": "cdf3e635a2cb1c3c7b30a2256fe563d7299b944b96d335f4585ea89b8514ba14"
+    },
+    {
+      "path": "pipelines/frozen/configs/eval.yaml",
+      "source": "frozen_clm_full_answer/configs/eval.yaml",
+      "sha256": "2dd444b979188caffc3fba5aef89d0b2cc56f64cb7b520c53415f847eed0fe57"
+    },
+    {
+      "path": "pipelines/frozen/eval/common_utils.py",
+      "source": "frozen_clm_full_answer/eval/common_utils.py",
+      "sha256": "b4781f89143394815d7b20d2de53e9f61c3522074e601736e7288dded59e354c"
+    },
+    {
+      "path": "pipelines/frozen/eval/data_prompt.py",
+      "source": "frozen_clm_full_answer/eval/data_prompt.py",
+      "sha256": "c517f63dbd61802b0a821283ccba293c2aff9068abcd749b054d5f4182c6fafd"
+    },
+    {
+      "path": "pipelines/frozen/eval/data_utils.py",
+      "source": "frozen_clm_full_answer/eval/data_utils.py",
+      "sha256": "48126ebf6cdcf59d3ff381d07c5a4316323ff3d4a033d0b1f07ce280ff2c1f5f"
+    },
+    {
+      "path": "pipelines/frozen/eval/inference_vllm.py",
+      "source": "frozen_clm_full_answer/eval/inference_vllm.py",
+      "sha256": "b3e26109f559df977cdbea3c69aaa427928b78f4a79f10cb6d38675f5c269401"
+    },
+    {
+      "path": "pipelines/frozen/eval/log_utils.py",
+      "source": "frozen_clm_full_answer/eval/log_utils.py",
+      "sha256": "f35d8cf7d889c656e75b27384df0b15f3ba6e946973f02f410c31eb98ccee7d8"
+    },
+    {
+      "path": "pipelines/frozen/eval/metrics.py",
+      "source": "frozen_clm_full_answer/eval/metrics.py",
+      "sha256": "cdf3e635a2cb1c3c7b30a2256fe563d7299b944b96d335f4585ea89b8514ba14"
+    },
+    {
+      "path": "pipelines/frozen/README.txt",
+      "source": "frozen_clm_full_answer/README.txt",
+      "sha256": "e63971c672d010b81d96a86267454e4ab8b6678fd3ded48b7f0a4e17bdcd0105"
+    },
+    {
+      "path": "pipelines/frozen/run.py",
+      "source": "frozen_clm_full_answer/run.py",
+      "sha256": "dc25348ed1769d1fbe051b2a56123afed2b59a2d5a0cc94628da22bccb8e59e1"
+    },
+    {
+      "path": "pipelines/frozen/source_manifest.json",
+      "source": "frozen_clm_full_answer/source_manifest.json",
+      "sha256": "cbff910b2ebbbd878c9cc4d550312768c239dec6047e015f9709c87dc6406fb1"
+    },
+    {
+      "path": "pipelines/synthesis/author/data_generation.yaml",
+      "source": "clm_training_step4_data/author/data_generation.yaml",
+      "sha256": "eeb5021080e4bd13eda33f5599745332f5155bcbdd0bdb8bfe38a100a56b32d0"
+    },
+    {
+      "path": "pipelines/synthesis/author/data_prompt.py",
+      "source": "clm_training_step4_data/author/data_prompt.py",
+      "sha256": "5ac745a40dd1cac229aab61ab61b83914ff644c325af5f374d3d1a9e80ca96af"
+    },
+    {
+      "path": "pipelines/synthesis/author/metrics.py",
+      "source": "clm_training_step4_data/author/metrics.py",
+      "sha256": "fb773ea8191a38f043f791cfaf738d4350c5c723a7c9da38b2b50915581d9e5e"
+    },
+    {
+      "path": "pipelines/synthesis/author/rag.json",
+      "source": "clm_training_step4_data/author/rag.json",
+      "sha256": "95cc92b568d0fd49b2dbfc34e5f874c14b7073e4cf3465522ac262f4e0a1a1a5"
+    },
+    {
+      "path": "pipelines/synthesis/author/train_data_critic.py",
+      "source": "clm_training_step4_data/author/train_data_critic.py",
+      "sha256": "8b13d620079b1d9ac19d1d3876eb9fa1d0fd4071848a6cf3c266e8072d4c8507"
+    },
+    {
+      "path": "pipelines/synthesis/build.py",
+      "source": "clm_training_step4_data/build.py",
+      "sha256": "00f9d52601ac4d3a6a33d2df2f496ee40cb0105504f5b665fb75dc816acfd2f7"
+    },
+    {
+      "path": "pipelines/synthesis/README.txt",
+      "source": "clm_training_step4_data/README.txt",
+      "sha256": "7aacef99ba4b4ddf8e521d87a40e269a8b6e19a9f845f0dcffe7d38248c97fc6"
+    },
+    {
+      "path": "pipelines/synthesis/run.py",
+      "source": "clm_training_step4_data/run.py",
+      "sha256": "7ed0c5ad0f651639890c1abc928855bf9b74f579c9b05af9de54a68a9decc505"
+    },
+    {
+      "path": "pipelines/synthesis/source_manifest.json",
+      "source": "clm_training_step4_data/source_manifest.json",
+      "sha256": "a3cab2c052215fe259c90756180663a0b31b7466dca4e510ae39ba6471fa8e20"
+    },
+    {
+      "path": "pipelines/sft/author_train_llama_rationale.yaml",
+      "source": "clm_training_step5/author_train_llama_rationale.yaml",
+      "sha256": "71b156227681b367d922fb08a21f77ffcb043203ed6d74832c85e08ca8a180ad"
+    },
+    {
+      "path": "pipelines/sft/collect_reports.py",
+      "source": "clm_training_step5/collect_reports.py",
+      "sha256": "99c440f8be16d3697acd2813afa9101262d319f913f3e1fe674ccd892221b7bb"
+    },
+    {
+      "path": "pipelines/sft/constraints.txt",
+      "source": "clm_training_step5/constraints.txt",
+      "sha256": "a518c3ef2a2c13713e446b8bab63951768c91b63d0d6d2b53121eb7660deea21"
+    },
+    {
+      "path": "pipelines/sft/package_manifest.json",
+      "source": "clm_training_step5/package_manifest.json",
+      "sha256": "dfe10961834b063eb334068de1bf2634a1f8c876e17a7cba859b01969c0adf29"
+    },
+    {
+      "path": "pipelines/sft/README.txt",
+      "source": "clm_training_step5/README.txt",
+      "sha256": "254665d2dd645817e7f1229f509ea12ff774c337947bee14e75545102e35faf6"
+    },
+    {
+      "path": "pipelines/sft/requirements-training.txt",
+      "source": "clm_training_step5/requirements-training.txt",
+      "sha256": "29636dc60a5488b75a44e4992702097d7432f35220a96abb68dda99d68b7d837"
+    },
+    {
+      "path": "pipelines/sft/run.py",
+      "source": "clm_training_step5/run.py",
+      "sha256": "de65744e4c2b96d15a6acb9a787c8aa9f711935f97983179d153068beca5c17f"
+    },
+    {
+      "path": "pipelines/sft/setup_env.sh",
+      "source": "clm_training_step5/setup_env.sh",
+      "sha256": "20dd64d6f200646c4ae9e88b0ff068ddbff3bf67961cf494178b1b5da0f480ac"
+    },
+    {
+      "path": "pipelines/sft/worker.py",
+      "source": "clm_training_step5/worker.py",
+      "sha256": "5ac27717c3733f208e06a41bae5f5df737b5f71c30a7dfcc758f2177ff0762f7"
+    },
+    {
+      "path": "pipelines/sft_eval/collect_reports.py",
+      "source": "clm_step6_2wiki/collect_reports.py",
+      "sha256": "d1743a824029f7213da1f9a626b26b1e26a51a44ce223701d2b9ffa4cf7f6b48"
+    },
+    {
+      "path": "pipelines/sft_eval/configs/eval.yaml",
+      "source": "clm_step6_2wiki/configs/eval.yaml",
+      "sha256": "2dd444b979188caffc3fba5aef89d0b2cc56f64cb7b520c53415f847eed0fe57"
+    },
+    {
+      "path": "pipelines/sft_eval/eval/common_utils.py",
+      "source": "clm_step6_2wiki/eval/common_utils.py",
+      "sha256": "b4781f89143394815d7b20d2de53e9f61c3522074e601736e7288dded59e354c"
+    },
+    {
+      "path": "pipelines/sft_eval/eval/data_prompt.py",
+      "source": "clm_step6_2wiki/eval/data_prompt.py",
+      "sha256": "c517f63dbd61802b0a821283ccba293c2aff9068abcd749b054d5f4182c6fafd"
+    },
+    {
+      "path": "pipelines/sft_eval/eval/data_utils.py",
+      "source": "clm_step6_2wiki/eval/data_utils.py",
+      "sha256": "48126ebf6cdcf59d3ff381d07c5a4316323ff3d4a033d0b1f07ce280ff2c1f5f"
+    },
+    {
+      "path": "pipelines/sft_eval/eval/inference_vllm.py",
+      "source": "clm_step6_2wiki/eval/inference_vllm.py",
+      "sha256": "b3e26109f559df977cdbea3c69aaa427928b78f4a79f10cb6d38675f5c269401"
+    },
+    {
+      "path": "pipelines/sft_eval/eval/log_utils.py",
+      "source": "clm_step6_2wiki/eval/log_utils.py",
+      "sha256": "f35d8cf7d889c656e75b27384df0b15f3ba6e946973f02f410c31eb98ccee7d8"
+    },
+    {
+      "path": "pipelines/sft_eval/eval/metrics.py",
+      "source": "clm_step6_2wiki/eval/metrics.py",
+      "sha256": "cdf3e635a2cb1c3c7b30a2256fe563d7299b944b96d335f4585ea89b8514ba14"
+    },
+    {
+      "path": "pipelines/sft_eval/merge.py",
+      "source": "clm_step6_2wiki/merge.py",
+      "sha256": "1c2050e9aeea70bf6cc3b1b2f30c1d38e1a39bad8dc0951ac6473fe4febee9cb"
+    },
+    {
+      "path": "pipelines/sft_eval/merge_and_smoke.sh",
+      "source": "clm_step6_2wiki/merge_and_smoke.sh",
+      "sha256": "c3f995dc65b4e62dfafeb2d8ef76e4f114ace23a6a6dab0033b317a9c41e69ba"
+    },
+    {
+      "path": "pipelines/sft_eval/README.txt",
+      "source": "clm_step6_2wiki/README.txt",
+      "sha256": "62f8eb57b7fd5b9899adf83441a9c87ff6859fb8fed38039ab0ed77b87c9ed54"
+    },
+    {
+      "path": "pipelines/sft_eval/run.py",
+      "source": "clm_step6_2wiki/run.py",
+      "sha256": "abc88adb15b6ab35219ad742fbfb5032857b04f4444e3253efc1b113697d673e"
+    },
+    {
+      "path": "pipelines/sft_eval/shared.py",
+      "source": "clm_step6_2wiki/shared.py",
+      "sha256": "393ec1926e18ead8dd14442527404cea3fb98ff2b5541463d115f13e2014e8a3"
+    },
+    {
+      "path": "pipelines/sft_eval/source_manifest.json",
+      "source": "clm_step6_2wiki/source_manifest.json",
+      "sha256": "e0a0cfd5ee1d39404630ecb1fc53e22d8dce3b2635548f5305645b94edeafd61"
+    },
+    {
+      "path": "pipelines/sft_eval/training_review.json",
+      "source": "clm_step6_2wiki/training_review.json",
+      "sha256": "6b0ddcc04e755e9308df0eb27520bd3c7a132f497282b52191a5d8a01f653cd9"
+    },
+    {
+      "path": "pipelines/grpo/build_data_base.py",
+      "source": "clm_rl_grpo_pilot_v3/build_data_base.py",
+      "sha256": "ee1f1a442560a7a9fc93294beab2e1ed8962715d85c071a97afe103d76c15046"
+    },
+    {
+      "path": "pipelines/grpo/check_environment.py",
+      "source": "clm_rl_grpo_pilot_v3/check_environment.py",
+      "sha256": "5c40fc7af9abbaa1b3cdf7db7aeb6b008260f848cf9e49e7af7da991fd360360"
+    },
+    {
+      "path": "pipelines/grpo/common.py",
+      "source": "clm_rl_grpo_pilot_v3/common.py",
+      "sha256": "9241ceb979c337a7734fbff41771c15c72c79707defc9724c167a79de76e2ee9"
+    },
+    {
+      "path": "pipelines/grpo/config.json",
+      "source": "clm_rl_grpo_pilot_v3/config.json",
+      "sha256": "ef1eae7ff2049533bdb68d3292a0ec6411dd642ccdadef446a01a2cae9189f11"
+    },
+    {
+      "path": "pipelines/grpo/critic_worker.py",
+      "source": "clm_rl_grpo_pilot_v3/critic_worker.py",
+      "sha256": "d32a03768bfdba07bcefcd53bca44d1d47689adeb69d9fb93fbb8ff76e8e5291"
+    },
+    {
+      "path": "pipelines/grpo/data/reward_cases.json",
+      "source": "clm_rl_grpo_pilot_v3/data/reward_cases.json",
+      "sha256": "75251f5e0e16f9aaf6fb059c6530727fe1bad7812ba8398f0b16d0cda0585cc4"
+    },
+    {
+      "path": "pipelines/grpo/inference.py",
+      "source": "clm_rl_grpo_pilot_v3/inference.py",
+      "sha256": "2802b99d14d98705aa77db252d1f15335dd66ea790d6ec7a5dce0d7a0c20a69a"
+    },
+    {
+      "path": "pipelines/grpo/local_checks.json",
+      "source": "clm_rl_grpo_pilot_v3/local_checks.json",
+      "sha256": "bfe1052991d18583b742cb7c226aa0145b953fad6e28d4623342fda1ee901aac"
+    },
+    {
+      "path": "pipelines/grpo/logical_reward.py",
+      "source": "clm_rl_grpo_pilot_v3/logical_reward.py",
+      "sha256": "e6a99aa1f2611ae8656712da584e01b48b34efc1f49d547943e8ca6096facf99"
+    },
+    {
+      "path": "pipelines/grpo/model_provenance.py",
+      "source": "clm_rl_grpo_pilot_v3/model_provenance.py",
+      "sha256": "393ec1926e18ead8dd14442527404cea3fb98ff2b5541463d115f13e2014e8a3"
+    },
+    {
+      "path": "pipelines/grpo/offline_replay.json",
+      "source": "clm_rl_grpo_pilot_v3/offline_replay.json",
+      "sha256": "0d4e39d2ba12d039d0fbf11c074073587b465c046879e2cad562b4a7c8e43196"
+    },
+    {
+      "path": "pipelines/grpo/package_local.py",
+      "source": "clm_rl_grpo_pilot_v3/package_local.py",
+      "sha256": "9c49499f70e37da42c861ece58de6bf076e4f0342e2b8ba603c721d931f16076"
+    },
+    {
+      "path": "pipelines/grpo/prepare_local_data.py",
+      "source": "clm_rl_grpo_pilot_v3/prepare_local_data.py",
+      "sha256": "61e6bda8a36064d808d3ba48b876774fdb007251ea6e861fab25ac2475416390"
+    },
+    {
+      "path": "pipelines/grpo/prompt_templates.json",
+      "source": "clm_rl_grpo_pilot_v3/prompt_templates.json",
+      "sha256": "32c834f72c0c47e1835a4a5c0a2e61017f52a04b4151ce3eb4b67e41263a5781"
+    },
+    {
+      "path": "pipelines/grpo/qwen_worker.py",
+      "source": "clm_rl_grpo_pilot_v3/qwen_worker.py",
+      "sha256": "720dbc881eb5b4b2a2ee8aa413f95b4ae92791f20e6a403b4ead9fd2353e2a8e"
+    },
+    {
+      "path": "pipelines/grpo/README.txt",
+      "source": "clm_rl_grpo_pilot_v3/README.txt",
+      "sha256": "d1e1f832262b5716756c42f0a26bb49e2296c0b2fef5aa93f57626cde99e9e60"
+    },
+    {
+      "path": "pipelines/grpo/reward.py",
+      "source": "clm_rl_grpo_pilot_v3/reward.py",
+      "sha256": "c250ef41a61166ece51a62e7000d373eb72b8ae61d014d7750162251d47b764c"
+    },
+    {
+      "path": "pipelines/grpo/reward_audit.py",
+      "source": "clm_rl_grpo_pilot_v3/reward_audit.py",
+      "sha256": "66311f05db8a224c5755b13c9e416a4787090f78a9a3c6a372d91228ae8622e1"
+    },
+    {
+      "path": "pipelines/grpo/run.py",
+      "source": "clm_rl_grpo_pilot_v3/run.py",
+      "sha256": "1f0cf6fb8c5e7a726dc67c225ebbb394e631d3f105d97de1a6c070e6ff12e1aa"
+    },
+    {
+      "path": "pipelines/grpo/score_stage.py",
+      "source": "clm_rl_grpo_pilot_v3/score_stage.py",
+      "sha256": "5b84938f0a66ea8eb96628a2e6904a9752ac78bf9a932f3c1533485991a68f7e"
+    },
+    {
+      "path": "pipelines/grpo/source_manifest.json",
+      "source": "clm_rl_grpo_pilot_v3/source_manifest.json",
+      "sha256": "fe8d516036a5cb0998224b80f48fc3708f92a9a5ff91930fc12e3e639226f259"
+    },
+    {
+      "path": "pipelines/grpo/summarize.py",
+      "source": "clm_rl_grpo_pilot_v3/summarize.py",
+      "sha256": "7782eb0f345aca6fd2af7f4c7c53ff55917663e6a94e5e7867ae14f20787f034"
+    },
+    {
+      "path": "pipelines/grpo/test_local.py",
+      "source": "clm_rl_grpo_pilot_v3/test_local.py",
+      "sha256": "db2643f38aad3e883615e85258d8490a6c4a5442832623522f64055976e764c3"
+    },
+    {
+      "path": "pipelines/grpo/test_math.py",
+      "source": "clm_rl_grpo_pilot_v3/test_math.py",
+      "sha256": "1e1875eb7f62c26b6f61782c0a31c057d3b23e34e93b24cce27f3908033d732a"
+    },
+    {
+      "path": "pipelines/grpo/V3_运行说明.txt",
+      "source": "clm_rl_grpo_pilot_v3/V3_运行说明.txt",
+      "sha256": "0fdfafb79b76c907b22ab0168370b81fcc54371ae2721ca0340c067581422c5e"
+    },
+    {
+      "path": "pipelines/rl_eval/configs/eval.yaml",
+      "source": "clm_rl_step7_2wiki_v3/configs/eval.yaml",
+      "sha256": "2dd444b979188caffc3fba5aef89d0b2cc56f64cb7b520c53415f847eed0fe57"
+    },
+    {
+      "path": "pipelines/rl_eval/eval/common_utils.py",
+      "source": "clm_rl_step7_2wiki_v3/eval/common_utils.py",
+      "sha256": "b4781f89143394815d7b20d2de53e9f61c3522074e601736e7288dded59e354c"
+    },
+    {
+      "path": "pipelines/rl_eval/eval/data_prompt.py",
+      "source": "clm_rl_step7_2wiki_v3/eval/data_prompt.py",
+      "sha256": "c517f63dbd61802b0a821283ccba293c2aff9068abcd749b054d5f4182c6fafd"
+    },
+    {
+      "path": "pipelines/rl_eval/eval/data_utils.py",
+      "source": "clm_rl_step7_2wiki_v3/eval/data_utils.py",
+      "sha256": "48126ebf6cdcf59d3ff381d07c5a4316323ff3d4a033d0b1f07ce280ff2c1f5f"
+    },
+    {
+      "path": "pipelines/rl_eval/eval/inference_vllm.py",
+      "source": "clm_rl_step7_2wiki_v3/eval/inference_vllm.py",
+      "sha256": "1d3f4a3bbe08bcea6ab65cb8a022d0f3299380d1ae517f34359abcd326cea5c6"
+    },
+    {
+      "path": "pipelines/rl_eval/eval/log_utils.py",
+      "source": "clm_rl_step7_2wiki_v3/eval/log_utils.py",
+      "sha256": "f35d8cf7d889c656e75b27384df0b15f3ba6e946973f02f410c31eb98ccee7d8"
+    },
+    {
+      "path": "pipelines/rl_eval/eval/metrics.py",
+      "source": "clm_rl_step7_2wiki_v3/eval/metrics.py",
+      "sha256": "cdf3e635a2cb1c3c7b30a2256fe563d7299b944b96d335f4585ea89b8514ba14"
+    },
+    {
+      "path": "pipelines/rl_eval/eval/rl_runtime.py",
+      "source": "clm_rl_step7_2wiki_v3/eval/rl_runtime.py",
+      "sha256": "e4cb7e46a9d063babe4c59f4f85a1be168034932883bbf10b3a84909710f2a06"
+    },
+    {
+      "path": "pipelines/rl_eval/local_validation.json",
+      "source": "clm_rl_step7_2wiki_v3/local_validation.json",
+      "sha256": "056774a8f74a10e921396d274cae013ac0ae5b6541681a658f6d2133446688f5"
+    },
+    {
+      "path": "pipelines/rl_eval/package_local.py",
+      "source": "clm_rl_step7_2wiki_v3/package_local.py",
+      "sha256": "c04df325620066ebb1cfe601d81799c2657c039aabfa69acb60046bdb83c876d"
+    },
+    {
+      "path": "pipelines/rl_eval/README_直接全量.txt",
+      "source": "clm_rl_step7_2wiki_v3/README_直接全量.txt",
+      "sha256": "a049069152546876d235e0e900f5e3219b7cb3e01409f6eb2343c407d78a350d"
+    },
+    {
+      "path": "pipelines/rl_eval/reference/author_source.json",
+      "source": "clm_rl_step7_2wiki_v3/reference/author_source.json",
+      "sha256": "4ac44fe815bd9d718601e55691cb3545219fdecf7ba5f73f1138d1a45b8103c4"
+    },
+    {
+      "path": "pipelines/rl_eval/reference/prior_probe_audit.json",
+      "source": "clm_rl_step7_2wiki_v3/reference/prior_probe_audit.json",
+      "sha256": "9713dab5bc0ccf7a539ab672dc8a4b4d44ef21e7eaef33c8c630ec6abb66208b"
+    },
+    {
+      "path": "pipelines/rl_eval/reference/reviewed_training.json",
+      "source": "clm_rl_step7_2wiki_v3/reference/reviewed_training.json",
+      "sha256": "c61288fb79be002bb43f9f76fec80faebd77e17e68abf477da6b9326025390c2"
+    },
+    {
+      "path": "pipelines/rl_eval/run.py",
+      "source": "clm_rl_step7_2wiki_v3/run.py",
+      "sha256": "2da26f03d2c9a64fdb0de4c95ae9193a713d90e18010149131b7ee7bf78c612d"
+    },
+    {
+      "path": "pipelines/rl_eval/shared.py",
+      "source": "clm_rl_step7_2wiki_v3/shared.py",
+      "sha256": "b50b7ec9a2003a16ddcadaa409624a44f5fed6ab2a044b69067abdbe17a938dc"
+    },
+    {
+      "path": "pipelines/rl_eval/source_manifest.json",
+      "source": "clm_rl_step7_2wiki_v3/source_manifest.json",
+      "sha256": "d66d34ed5e4c688cae01ffc60714964417af3343360f99bb7179d9fa38a6603f"
+    },
+    {
+      "path": "pipelines/rl_eval/test_local.py",
+      "source": "clm_rl_step7_2wiki_v3/test_local.py",
+      "sha256": "36918942f1259da83edeaaab60b1ed639814c8d04c6dfdcb9f23f4c4e9165ab8"
+    }
+  ],
+  "excluded": "weights, raw datasets, predictions, credentials, failed earlier versions; original manifests may reference private external inputs"
+}

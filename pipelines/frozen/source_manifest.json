@@ -1,0 +1,14 @@
+{
+  "repository": "https://github.com/upup-wei/RAG-ReasonAlignment",
+  "source": "Existing course inference adaptation, copied unchanged",
+  "files_sha256": {
+    "run.py": "dc25348ed1769d1fbe051b2a56123afed2b59a2d5a0cc94628da22bccb8e59e1",
+    "eval/common_utils.py": "b4781f89143394815d7b20d2de53e9f61c3522074e601736e7288dded59e354c",
+    "eval/data_prompt.py": "c517f63dbd61802b0a821283ccba293c2aff9068abcd749b054d5f4182c6fafd",
+    "eval/data_utils.py": "48126ebf6cdcf59d3ff381d07c5a4316323ff3d4a033d0b1f07ce280ff2c1f5f",
+    "eval/inference_vllm.py": "b3e26109f559df977cdbea3c69aaa427928b78f4a79f10cb6d38675f5c269401",
+    "eval/log_utils.py": "f35d8cf7d889c656e75b27384df0b15f3ba6e946973f02f410c31eb98ccee7d8",
+    "eval/metrics.py": "cdf3e635a2cb1c3c7b30a2256fe563d7299b944b96d335f4585ea89b8514ba14",
+    "configs/eval.yaml": "2dd444b979188caffc3fba5aef89d0b2cc56f64cb7b520c53415f847eed0fe57"
+  }
+}

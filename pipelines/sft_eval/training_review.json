@@ -1,0 +1,56 @@
+{
+  "status": "ready_for_merge_and_smoke",
+  "report_archive_sha256": "4dd3f5d311be6541232dabfd2fcf04b28c4893a2ce49b7970d6b8ce432c4c65e",
+  "full_validation": {
+    "status": "complete",
+    "phase": "full",
+    "global_step": 562,
+    "epoch": 1.9955555555555555,
+    "train_loss": 0.2959648170293014,
+    "adapter_sha256": "f0c8979757af7dffd41635eb61387902a7d367f73730c9bc31855cc2b8388343",
+    "adapter_numel": 41943040,
+    "gpu_peaks_gib": [
+      21.492704391479492,
+      21.609444618225098,
+      21.902216911315918,
+      21.697489261627197
+    ],
+    "adapter_lora_b_updated": true
+  },
+  "eval_results": {
+    "epoch": 1.9955555555555555,
+    "eval_loss": 0.26971009373664856,
+    "eval_runtime": 188.2411,
+    "eval_samples_per_second": 5.312,
+    "eval_steps_per_second": 1.328
+  },
+  "split_checked": true,
+  "training_source": "original_step4_unfiltered",
+  "validation_losses": [
+    {
+      "step": 100,
+      "eval_loss": 0.3041658401489258
+    },
+    {
+      "step": 200,
+      "eval_loss": 0.2814751863479614
+    },
+    {
+      "step": 300,
+      "eval_loss": 0.2742253541946411
+    },
+    {
+      "step": 400,
+      "eval_loss": 0.2709561288356781
+    },
+    {
+      "step": 500,
+      "eval_loss": 0.2697606384754181
+    }
+  ],
+  "limitations": [
+    "Weights are on server; adapter integrity will be checked there against the reviewed report hash.",
+    "Training losses are not downstream accuracy.",
+    "Step6 GPU execution pending server smoke test."
+  ]
+}

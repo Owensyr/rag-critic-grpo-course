@@ -1,0 +1,534 @@
+{
+  "source_report_sha256": "1dcdb10ba5652e386f267be58773ec2e3a9d778f2f6f8e1d3bdbe18e9beb5a7c",
+  "mode": "offline_replay_of_v2_model_outputs_plus_v3_rules",
+  "fresh_gpu_calibration": false,
+  "total": 56,
+  "passed": 55,
+  "suites": {
+    "original40": {
+      "total": 40,
+      "passed": 39
+    },
+    "paraphrase16": {
+      "total": 16,
+      "passed": 16
+    }
+  },
+  "methods": {
+    "replayed_v2_model_output": 36,
+    "normalized_exact_match": 3,
+    "explicit_country_relation_truth_table": 12,
+    "unambiguous_date_equivalence": 2,
+    "scoped_us_country_demonym_equivalence": 1,
+    "explicit_abstention": 1,
+    "unverified_name_suffix": 1
+  },
+  "critical_failed": [],
+  "cases": [
+    {
+      "id": "case01",
+      "suite": "original40",
+      "expected": true,
+      "actual": true,
+      "passed": true,
+      "method": "replayed_v2_model_output",
+      "critical": true
+    },
+    {
+      "id": "case02",
+      "suite": "original40",
+      "expected": true,
+      "actual": true,
+      "passed": true,
+      "method": "normalized_exact_match",
+      "critical": false
+    },
+    {
+      "id": "case03",
+      "suite": "original40",
+      "expected": false,
+      "actual": false,
+      "passed": true,
+      "method": "replayed_v2_model_output",
+      "critical": true
+    },
+    {
+      "id": "case04",
+      "suite": "original40",
+      "expected": false,
+      "actual": false,
+      "passed": true,
+      "method": "replayed_v2_model_output",
+      "critical": true
+    },
+    {
+      "id": "case05",
+      "suite": "original40",
+      "expected": false,
+      "actual": false,
+      "passed": true,
+      "method": "replayed_v2_model_output",
+      "critical": true
+    },
+    {
+      "id": "case06",
+      "suite": "original40",
+      "expected": true,
+      "actual": true,
+      "passed": true,
+      "method": "replayed_v2_model_output",
+      "critical": false
+    },
+    {
+      "id": "case07",
+      "suite": "original40",
+      "expected": false,
+      "actual": false,
+      "passed": true,
+      "method": "replayed_v2_model_output",
+      "critical": true
+    },
+    {
+      "id": "case08",
+      "suite": "original40",
+      "expected": true,
+      "actual": true,
+      "passed": true,
+      "method": "replayed_v2_model_output",
+      "critical": true
+    },
+    {
+      "id": "case09",
+      "suite": "original40",
+      "expected": false,
+      "actual": false,
+      "passed": true,
+      "method": "replayed_v2_model_output",
+      "critical": true
+    },
+    {
+      "id": "case10",
+      "suite": "original40",
+      "expected": false,
+      "actual": false,
+      "passed": true,
+      "method": "replayed_v2_model_output",
+      "critical": true
+    },
+    {
+      "id": "case11",
+      "suite": "original40",
+      "expected": true,
+      "actual": true,
+      "passed": true,
+      "method": "replayed_v2_model_output",
+      "critical": true
+    },
+    {
+      "id": "case12",
+      "suite": "original40",
+      "expected": true,
+      "actual": true,
+      "passed": true,
+      "method": "replayed_v2_model_output",
+      "critical": true
+    },
+    {
+      "id": "case13",
+      "suite": "original40",
+      "expected": false,
+      "actual": false,
+      "passed": true,
+      "method": "replayed_v2_model_output",
+      "critical": true
+    },
+    {
+      "id": "case14",
+      "suite": "original40",
+      "expected": false,
+      "actual": false,
+      "passed": true,
+      "method": "explicit_country_relation_truth_table",
+      "critical": true
+    },
+    {
+      "id": "case15",
+      "suite": "original40",
+      "expected": true,
+      "actual": true,
+      "passed": true,
+      "method": "explicit_country_relation_truth_table",
+      "critical": true
+    },
+    {
+      "id": "case16",
+      "suite": "original40",
+      "expected": false,
+      "actual": false,
+      "passed": true,
+      "method": "replayed_v2_model_output",
+      "critical": true
+    },
+    {
+      "id": "case17",
+      "suite": "original40",
+      "expected": true,
+      "actual": true,
+      "passed": true,
+      "method": "normalized_exact_match",
+      "critical": false
+    },
+    {
+      "id": "case18",
+      "suite": "original40",
+      "expected": false,
+      "actual": false,
+      "passed": true,
+      "method": "replayed_v2_model_output",
+      "critical": false
+    },
+    {
+      "id": "case19",
+      "suite": "original40",
+      "expected": false,
+      "actual": false,
+      "passed": true,
+      "method": "replayed_v2_model_output",
+      "critical": true
+    },
+    {
+      "id": "case20",
+      "suite": "original40",
+      "expected": true,
+      "actual": true,
+      "passed": true,
+      "method": "unambiguous_date_equivalence",
+      "critical": false
+    },
+    {
+      "id": "case21",
+      "suite": "original40",
+      "expected": true,
+      "actual": true,
+      "passed": true,
+      "method": "unambiguous_date_equivalence",
+      "critical": false
+    },
+    {
+      "id": "case22",
+      "suite": "original40",
+      "expected": false,
+      "actual": false,
+      "passed": true,
+      "method": "replayed_v2_model_output",
+      "critical": false
+    },
+    {
+      "id": "case23",
+      "suite": "original40",
+      "expected": true,
+      "actual": true,
+      "passed": true,
+      "method": "replayed_v2_model_output",
+      "critical": false
+    },
+    {
+      "id": "case24",
+      "suite": "original40",
+      "expected": false,
+      "actual": false,
+      "passed": true,
+      "method": "replayed_v2_model_output",
+      "critical": true
+    },
+    {
+      "id": "case25",
+      "suite": "original40",
+      "expected": true,
+      "actual": true,
+      "passed": true,
+      "method": "replayed_v2_model_output",
+      "critical": false
+    },
+    {
+      "id": "case26",
+      "suite": "original40",
+      "expected": false,
+      "actual": false,
+      "passed": true,
+      "method": "replayed_v2_model_output",
+      "critical": true
+    },
+    {
+      "id": "case27",
+      "suite": "original40",
+      "expected": true,
+      "actual": true,
+      "passed": true,
+      "method": "normalized_exact_match",
+      "critical": false
+    },
+    {
+      "id": "case28",
+      "suite": "original40",
+      "expected": false,
+      "actual": false,
+      "passed": true,
+      "method": "replayed_v2_model_output",
+      "critical": false
+    },
+    {
+      "id": "case29",
+      "suite": "original40",
+      "expected": false,
+      "actual": false,
+      "passed": true,
+      "method": "replayed_v2_model_output",
+      "critical": true
+    },
+    {
+      "id": "case30",
+      "suite": "original40",
+      "expected": true,
+      "actual": true,
+      "passed": true,
+      "method": "replayed_v2_model_output",
+      "critical": false
+    },
+    {
+      "id": "case31",
+      "suite": "original40",
+      "expected": false,
+      "actual": false,
+      "passed": true,
+      "method": "replayed_v2_model_output",
+      "critical": true
+    },
+    {
+      "id": "case32",
+      "suite": "original40",
+      "expected": true,
+      "actual": true,
+      "passed": true,
+      "method": "scoped_us_country_demonym_equivalence",
+      "critical": false
+    },
+    {
+      "id": "case33",
+      "suite": "original40",
+      "expected": true,
+      "actual": true,
+      "passed": true,
+      "method": "replayed_v2_model_output",
+      "critical": false
+    },
+    {
+      "id": "case34",
+      "suite": "original40",
+      "expected": true,
+      "actual": true,
+      "passed": true,
+      "method": "replayed_v2_model_output",
+      "critical": false
+    },
+    {
+      "id": "case35",
+      "suite": "original40",
+      "expected": false,
+      "actual": false,
+      "passed": true,
+      "method": "replayed_v2_model_output",
+      "critical": true
+    },
+    {
+      "id": "case36",
+      "suite": "original40",
+      "expected": false,
+      "actual": false,
+      "passed": true,
+      "method": "explicit_abstention",
+      "critical": true
+    },
+    {
+      "id": "case37",
+      "suite": "original40",
+      "expected": false,
+      "actual": false,
+      "passed": true,
+      "method": "replayed_v2_model_output",
+      "critical": true
+    },
+    {
+      "id": "case38",
+      "suite": "original40",
+      "expected": false,
+      "actual": false,
+      "passed": true,
+      "method": "replayed_v2_model_output",
+      "critical": true
+    },
+    {
+      "id": "case39",
+      "suite": "original40",
+      "expected": true,
+      "actual": true,
+      "passed": true,
+      "method": "replayed_v2_model_output",
+      "critical": false
+    },
+    {
+      "id": "case40",
+      "suite": "original40",
+      "expected": false,
+      "actual": null,
+      "passed": false,
+      "method": "unverified_name_suffix",
+      "critical": false
+    },
+    {
+      "id": "transfer01",
+      "suite": "paraphrase16",
+      "expected": true,
+      "actual": true,
+      "passed": true,
+      "method": "replayed_v2_model_output",
+      "critical": true
+    },
+    {
+      "id": "transfer02",
+      "suite": "paraphrase16",
+      "expected": false,
+      "actual": false,
+      "passed": true,
+      "method": "replayed_v2_model_output",
+      "critical": true
+    },
+    {
+      "id": "transfer03",
+      "suite": "paraphrase16",
+      "expected": false,
+      "actual": false,
+      "passed": true,
+      "method": "replayed_v2_model_output",
+      "critical": true
+    },
+    {
+      "id": "transfer04",
+      "suite": "paraphrase16",
+      "expected": true,
+      "actual": true,
+      "passed": true,
+      "method": "replayed_v2_model_output",
+      "critical": true
+    },
+    {
+      "id": "transfer05",
+      "suite": "paraphrase16",
+      "expected": false,
+      "actual": false,
+      "passed": true,
+      "method": "replayed_v2_model_output",
+      "critical": true
+    },
+    {
+      "id": "transfer06",
+      "suite": "paraphrase16",
+      "expected": true,
+      "actual": true,
+      "passed": true,
+      "method": "replayed_v2_model_output",
+      "critical": true
+    },
+    {
+      "id": "transfer07",
+      "suite": "paraphrase16",
+      "expected": true,
+      "actual": true,
+      "passed": true,
+      "method": "explicit_country_relation_truth_table",
+      "critical": true
+    },
+    {
+      "id": "transfer08",
+      "suite": "paraphrase16",
+      "expected": false,
+      "actual": false,
+      "passed": true,
+      "method": "explicit_country_relation_truth_table",
+      "critical": true
+    },
+    {
+      "id": "transfer09",
+      "suite": "paraphrase16",
+      "expected": true,
+      "actual": true,
+      "passed": true,
+      "method": "explicit_country_relation_truth_table",
+      "critical": true
+    },
+    {
+      "id": "transfer10",
+      "suite": "paraphrase16",
+      "expected": false,
+      "actual": false,
+      "passed": true,
+      "method": "explicit_country_relation_truth_table",
+      "critical": true
+    },
+    {
+      "id": "transfer11",
+      "suite": "paraphrase16",
+      "expected": true,
+      "actual": true,
+      "passed": true,
+      "method": "explicit_country_relation_truth_table",
+      "critical": true
+    },
+    {
+      "id": "transfer12",
+      "suite": "paraphrase16",
+      "expected": false,
+      "actual": false,
+      "passed": true,
+      "method": "explicit_country_relation_truth_table",
+      "critical": true
+    },
+    {
+      "id": "transfer13",
+      "suite": "paraphrase16",
+      "expected": true,
+      "actual": true,
+      "passed": true,
+      "method": "explicit_country_relation_truth_table",
+      "critical": true
+    },
+    {
+      "id": "transfer14",
+      "suite": "paraphrase16",
+      "expected": false,
+      "actual": false,
+      "passed": true,
+      "method": "explicit_country_relation_truth_table",
+      "critical": true
+    },
+    {
+      "id": "transfer15",
+      "suite": "paraphrase16",
+      "expected": true,
+      "actual": true,
+      "passed": true,
+      "method": "explicit_country_relation_truth_table",
+      "critical": true
+    },
+    {
+      "id": "transfer16",
+      "suite": "paraphrase16",
+      "expected": false,
+      "actual": false,
+      "passed": true,
+      "method": "explicit_country_relation_truth_table",
+      "critical": true
+    }
+  ],
+  "limitation": "Existing model judgments replayed only. Fresh server execution is mandatory; not a measure of held-out judge accuracy. Legacy suffix fixture expected false, but v3 abstains rather than asserting identity."
+}

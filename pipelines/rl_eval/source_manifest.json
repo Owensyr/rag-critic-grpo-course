@@ -1,0 +1,23 @@
+{
+  "package": "clm_rl_step7_2wiki_v3",
+  "version": 3,
+  "files_sha256": {
+    "configs/eval.yaml": "2dd444b979188caffc3fba5aef89d0b2cc56f64cb7b520c53415f847eed0fe57",
+    "eval/common_utils.py": "b4781f89143394815d7b20d2de53e9f61c3522074e601736e7288dded59e354c",
+    "eval/data_prompt.py": "c517f63dbd61802b0a821283ccba293c2aff9068abcd749b054d5f4182c6fafd",
+    "eval/data_utils.py": "48126ebf6cdcf59d3ff381d07c5a4316323ff3d4a033d0b1f07ce280ff2c1f5f",
+    "eval/inference_vllm.py": "1d3f4a3bbe08bcea6ab65cb8a022d0f3299380d1ae517f34359abcd326cea5c6",
+    "eval/log_utils.py": "f35d8cf7d889c656e75b27384df0b15f3ba6e946973f02f410c31eb98ccee7d8",
+    "eval/metrics.py": "cdf3e635a2cb1c3c7b30a2256fe563d7299b944b96d335f4585ea89b8514ba14",
+    "eval/rl_runtime.py": "e4cb7e46a9d063babe4c59f4f85a1be168034932883bbf10b3a84909710f2a06",
+    "local_validation.json": "056774a8f74a10e921396d274cae013ac0ae5b6541681a658f6d2133446688f5",
+    "package_local.py": "c04df325620066ebb1cfe601d81799c2657c039aabfa69acb60046bdb83c876d",
+    "README_直接全量.txt": "a049069152546876d235e0e900f5e3219b7cb3e01409f6eb2343c407d78a350d",
+    "reference/author_source.json": "4ac44fe815bd9d718601e55691cb3545219fdecf7ba5f73f1138d1a45b8103c4",
+    "reference/prior_probe_audit.json": "9713dab5bc0ccf7a539ab672dc8a4b4d44ef21e7eaef33c8c630ec6abb66208b",
+    "reference/reviewed_training.json": "c61288fb79be002bb43f9f76fec80faebd77e17e68abf477da6b9326025390c2",
+    "run.py": "2da26f03d2c9a64fdb0de4c95ae9193a713d90e18010149131b7ee7bf78c612d",
+    "shared.py": "b50b7ec9a2003a16ddcadaa409624a44f5fed6ab2a044b69067abdbe17a938dc",
+    "test_local.py": "36918942f1259da83edeaaab60b1ed639814c8d04c6dfdcb9f23f4c4e9165ab8"
+  }
+}

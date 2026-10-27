@@ -1,0 +1,14 @@
+{
+  "RationalePromptTemplate": {
+    "base_system_prompt_rationale": "Read the following documents relevant to the given question: {query}\n{text}",
+    "base_user_prompt": "\nPlease identify documents that are useful to answer the given question: '{query}', and explain how the contents lead to the answer.\n\n"
+  },
+  "CritiqueRationalePromptTemplate": {
+    "base_system_prompt_critique": "Read the following documents relevant to the given question: {query}{text}",
+    "base_user_prompt": "\nHere is the given weak rationale: {rationale}\nPlease identify the weaknesses and hallucinations of the rationale, and give constructive criticism for improving the weak rationale."
+  },
+  "RefinePromptTemplate": {
+    "base_system_prompt_critique": "Read the following documents relevant to the given question: {query}{text}",
+    "base_user_prompt": "\nHere is the given weak rationale: {rationale}\n\nHere is the given critique: {critique}\nPlease correct the weak rationale based on the critique, and write a better rationale to explain how the contents lead to the answer."
+  }
+}

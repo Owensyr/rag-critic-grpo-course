@@ -1,0 +1,24 @@
+{
+  "date": "2026-10-27",
+  "portable_tools_unit_tests": {"passed": 15, "failed": 0},
+  "historical_grpo_protocol_tests_in_prepared_workdir": {"passed": 22, "failed": 0},
+  "historical_rl_runtime_protocol_tests": {"passed": 11, "failed": 0},
+  "total_cpu_tests_passed": 48,
+  "integration_checks": {
+    "original_10k_selection_verified_in_prepared_synthesis_workdir": true,
+    "custom_gpu_ids_bound_and_source_manifest_resealed": true,
+    "grpo_workdir_restored_with_reviewed_private_questions_and_labels": true,
+    "grpo_workdir_manifest_files_verified": 27,
+    "real_full_rationale_csv_reexport_rows": 12576,
+    "real_full_rationale_csv_reexport_sha256": "d1461bd83a2bdd1845668b96a26b4cbeabfd991e9715abbc3d497833983d2814",
+    "reexport_matches_original_submission_exactly": true,
+    "figures_visually_reviewed": ["results/kaggle_scores.png", "results/sft_loss.png"]
+  },
+  "local_environment": "Windows, Python 3.13 for stdlib protocol checks and plotting only",
+  "limitations": [
+    "Portable GPU training and inference have not been rerun on this local machine.",
+    "PyTorch is not installed in this local Python; test_math.py was not rerun here. Historical GPU run checks are retained in the experiment reports.",
+    "Private fixture data stayed outside the public repository.",
+    "Server asset collector has not yet been run against the original server; its source-path inventory was checked against known run artifacts."
+  ]
+}

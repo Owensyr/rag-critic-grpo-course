@@ -1,0 +1,44 @@
+{
+  "status": "inconclusive",
+  "adapter_id": 16,
+  "adapter_path": "/home/zengyufan/RAG/clm_rl_grpo_pilot_v3/artifacts/checkpoints/step016",
+  "base_repeat": {
+    "max_logprob_delta": 0.6249732971191406,
+    "compared_values": 738,
+    "different_token_sequences": 2
+  },
+  "adapter_effect": {
+    "max_logprob_delta": 0.7499914169311523,
+    "compared_values": 705,
+    "different_token_sequences": 3
+  },
+  "binding": {
+    "base": {
+      "submitted_lora_request_count": 0,
+      "returned_metadata_matched_count": 0,
+      "returned_metadata_missing_count": 0,
+      "registered_adapter_ids": [],
+      "evidence": "Explicit per-batch lora_request plus engine registration; V1 may omit output metadata. Numerical effect checked separately."
+    },
+    "adapted": {
+      "submitted_lora_request_count": 5,
+      "returned_metadata_matched_count": 0,
+      "returned_metadata_missing_count": 5,
+      "registered_adapter_ids": [
+        16
+      ],
+      "evidence": "Explicit per-batch lora_request plus engine registration; V1 may omit output metadata. Numerical effect checked separately."
+    },
+    "base_repeat": {
+      "submitted_lora_request_count": 0,
+      "returned_metadata_matched_count": 0,
+      "returned_metadata_missing_count": 0,
+      "registered_adapter_ids": [],
+      "evidence": "Explicit per-batch lora_request plus engine registration; V1 may omit output metadata. Numerical effect checked separately."
+    }
+  },
+  "limitation": "Binding and numerical effect check on five prompts; not an accuracy test or proof of HF/vLLM numerical identity.",
+  "source_archive_sha256": "5f835052b07513bafc11a47c62152e7c3e99b2fcfe8f8968bc11049866fcabcf",
+  "role": "historical_nonblocking_diagnostic",
+  "interpretation": "Adapter ID 16 registered and explicitly requested. Base repeat changes in 2/5 sequences prevent attribution of 3/5 adapter differences. This diagnostic does not establish absence of RL effect and is not a prerequisite for Kaggle inference."
+}

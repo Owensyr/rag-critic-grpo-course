@@ -1,0 +1,23 @@
+{
+  "status": "local_checks_passed",
+  "protocol_tests": 22,
+  "python310_syntax": true,
+  "unchanged_files": [
+    "critic_worker.py",
+    "qwen_worker.py",
+    "common.py",
+    "inference.py",
+    "test_math.py",
+    "reward.py",
+    "data/reward_cases.json",
+    "data/questions.json",
+    "data/gold.json",
+    "data/selection_audit.json"
+  ],
+  "training_settings_unchanged": true,
+  "semantic_judge_calibration_local": false,
+  "four_gpu_test_local": false,
+  "test_stderr": "......................\n----------------------------------------------------------------------\nRan 22 tests in 0.620s\n\nOK\n",
+  "offline_replay_passed": 55,
+  "limitation": "Existing model judgments replayed only. Fresh server execution is mandatory; not a measure of held-out judge accuracy. Legacy suffix fixture expected false, but v3 abstains rather than asserting identity."
+}

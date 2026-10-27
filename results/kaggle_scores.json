@@ -1,0 +1,36 @@
+{
+  "source": "User-reported Kaggle scores on 2026-10-27; submission IDs and scoreboard screenshots not yet supplied",
+  "metric": "Kaggle competition score; hidden evaluation implementation and public/private split are not locally verified",
+  "submitted_rows": 12576,
+  "answer_format": "full Qwen rationale, verbatim",
+  "experiments": [
+    {
+      "id": "qwen",
+      "name": "Qwen baseline",
+      "score": 0.45507,
+      "delta_vs_qwen_percentage_points": 0.0,
+      "delta_vs_previous_percentage_points": null
+    },
+    {
+      "id": "frozen",
+      "name": "Qwen + Frozen CLM",
+      "score": 0.46382,
+      "delta_vs_qwen_percentage_points": 0.875,
+      "delta_vs_previous_percentage_points": 0.875
+    },
+    {
+      "id": "sft",
+      "name": "Qwen + SFT CLM",
+      "score": 0.51311,
+      "delta_vs_qwen_percentage_points": 5.804,
+      "delta_vs_previous_percentage_points": 4.929
+    },
+    {
+      "id": "rl",
+      "name": "Qwen + SFT CLM + GRPO",
+      "score": 0.51523,
+      "delta_vs_qwen_percentage_points": 6.016,
+      "delta_vs_previous_percentage_points": 0.212
+    }
+  ]
+}

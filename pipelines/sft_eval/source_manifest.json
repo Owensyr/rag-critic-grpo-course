@@ -1,0 +1,20 @@
+{
+  "repository": "https://github.com/upup-wei/RAG-ReasonAlignment",
+  "source": "Inference eval code unchanged from frozen_clm_full_answer; trained CLM wrapper and LLaMA-Factory export added",
+  "files_sha256": {
+    "collect_reports.py": "d1743a824029f7213da1f9a626b26b1e26a51a44ce223701d2b9ffa4cf7f6b48",
+    "configs/eval.yaml": "2dd444b979188caffc3fba5aef89d0b2cc56f64cb7b520c53415f847eed0fe57",
+    "eval/common_utils.py": "b4781f89143394815d7b20d2de53e9f61c3522074e601736e7288dded59e354c",
+    "eval/data_prompt.py": "c517f63dbd61802b0a821283ccba293c2aff9068abcd749b054d5f4182c6fafd",
+    "eval/data_utils.py": "48126ebf6cdcf59d3ff381d07c5a4316323ff3d4a033d0b1f07ce280ff2c1f5f",
+    "eval/inference_vllm.py": "b3e26109f559df977cdbea3c69aaa427928b78f4a79f10cb6d38675f5c269401",
+    "eval/log_utils.py": "f35d8cf7d889c656e75b27384df0b15f3ba6e946973f02f410c31eb98ccee7d8",
+    "eval/metrics.py": "cdf3e635a2cb1c3c7b30a2256fe563d7299b944b96d335f4585ea89b8514ba14",
+    "merge.py": "1c2050e9aeea70bf6cc3b1b2f30c1d38e1a39bad8dc0951ac6473fe4febee9cb",
+    "merge_and_smoke.sh": "c3f995dc65b4e62dfafeb2d8ef76e4f114ace23a6a6dab0033b317a9c41e69ba",
+    "README.txt": "62f8eb57b7fd5b9899adf83441a9c87ff6859fb8fed38039ab0ed77b87c9ed54",
+    "run.py": "abc88adb15b6ab35219ad742fbfb5032857b04f4444e3253efc1b113697d673e",
+    "shared.py": "393ec1926e18ead8dd14442527404cea3fb98ff2b5541463d115f13e2014e8a3",
+    "training_review.json": "6b0ddcc04e755e9308df0eb27520bd3c7a132f497282b52191a5d8a01f653cd9"
+  }
+}

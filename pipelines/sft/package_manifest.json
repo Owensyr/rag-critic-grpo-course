@@ -1,0 +1,13 @@
+{
+  "purpose": "Original unfiltered step4 CFT -> LLaMA Factory LoRA",
+  "files_sha256": {
+    "author_train_llama_rationale.yaml": "71b156227681b367d922fb08a21f77ffcb043203ed6d74832c85e08ca8a180ad",
+    "collect_reports.py": "99c440f8be16d3697acd2813afa9101262d319f913f3e1fe674ccd892221b7bb",
+    "constraints.txt": "a518c3ef2a2c13713e446b8bab63951768c91b63d0d6d2b53121eb7660deea21",
+    "README.txt": "254665d2dd645817e7f1229f509ea12ff774c337947bee14e75545102e35faf6",
+    "requirements-training.txt": "29636dc60a5488b75a44e4992702097d7432f35220a96abb68dda99d68b7d837",
+    "run.py": "de65744e4c2b96d15a6acb9a787c8aa9f711935f97983179d153068beca5c17f",
+    "setup_env.sh": "20dd64d6f200646c4ae9e88b0ff068ddbff3bf67961cf494178b1b5da0f480ac",
+    "worker.py": "5ac27717c3733f208e06a41bae5f5df737b5f71c30a7dfcc758f2177ff0762f7"
+  }
+}

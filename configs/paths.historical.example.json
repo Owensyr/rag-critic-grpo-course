@@ -1,0 +1,16 @@
+{
+  "inference_python": "~/.venvs/rag-inference/bin/python",
+  "training_python": "~/.venvs/clm-training/bin/python",
+  "qwen": "models/Qwen2.5-7B-Instruct",
+  "llama": "models/Llama-3.1-8B-Instruct",
+  "weak": "models/Qwen2.5-0.5B-Instruct",
+  "sft": "private/weights/sft_merged",
+  "sft_adapter": "private/weights/sft_adapter",
+  "sft_corpus": "private/sft/cft_train_10k.json",
+  "rl_adapter": "private/weights/rl_adapter",
+  "test": "private/course/test.json",
+  "sample": "private/course/sample_submission.csv",
+  "baseline": "private/course/qwen_initial.json",
+  "private_root": "private",
+  "gpu_ids": "0,1,2,3"
+}

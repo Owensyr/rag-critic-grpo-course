@@ -1,0 +1,9 @@
+{
+  "status": "passed",
+  "historical_files_verified": 93,
+  "python_files_syntax_checked": 76,
+  "forbidden_public_files": [],
+  "secret_pattern_hits": [],
+  "broken_document_links": [],
+  "scope": "Static CPU checks only. Historical GPU runs are independently recorded; portable GPU rerun has not been performed here."
+}

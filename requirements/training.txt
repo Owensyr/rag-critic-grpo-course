@@ -1,0 +1,10 @@
+llamafactory==0.9.3
+transformers==4.51.3
+tokenizers==0.21.1
+datasets==3.6.0
+accelerate==1.7.0
+peft==0.15.2
+trl==0.9.6
+numpy==1.26.4
+huggingface-hub==0.34.4
+safetensors==0.8.0
