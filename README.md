@@ -1,6 +1,6 @@
 # 基于批判模型与 GRPO 的 RAG 问答改进
 
-人工智能原理与应用课程实验：固定 Qwen2.5-7B-Instruct 为回答模型，在课程版 2WikiMultiHopQA 上比较 Qwen 基线、Frozen CLM、SFT CLM 与 SFT CLM + GRPO。
+人工智能原理与应用课程实验：固定 Qwen2.5-7B-Instruct 为回答模型，在 2WikiMultiHopQA 数据集上比较 Qwen 基线、Frozen CLM、SFT CLM 与 SFT CLM + GRPO。
 
 **本 README 是从基础模型开始的完整训练路线，不需要下载我们的 `course_private_assets.tar.gz`、SFT LoRA 或 RL LoRA。** 读者自行下载基础模型和作者公开预处理数据，从课程来源获取测试集及提交模板，然后构造训练数据、训练模型并生成 Kaggle CSV。基础模型权重仍然必需；代码不会从随机初始化训练 7B/8B 模型。
 
