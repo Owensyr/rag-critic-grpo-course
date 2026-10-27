@@ -1,6 +1,4 @@
-*.py text eol=lf
-*.sh text eol=lf
-*.md text eol=lf
+* text=auto eol=lf
 # Historical snapshots are hash-sealed byte-for-byte. Do not normalize them.
 pipelines/** -text
 provenance/** -text

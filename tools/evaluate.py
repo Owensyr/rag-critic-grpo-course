@@ -8,6 +8,17 @@ import time
 from common import ROOT,configuration,load,save,sha,abspath,verify_model
 from export_submission import export,template_ids
 
+def validate_sampling_paths(c,group):
+    # The preserved historical workers choose sampling settings from the FULL
+    # model path, in this order. Catch renamed/ambiguous models before loading a GPU.
+    expected={'qwen':'qwen'}
+    if group!='qwen':expected['llama' if group=='frozen' else 'sft']='llama'
+    for key,family in expected.items():
+        actual=next((x for x in ('deepseek','llama','qwen') if x in c[key].lower()),None)
+        if actual!=family:
+            raise ValueError(f'{key}: historical sampling expects a {family} path; got {c[key]}. '
+                             'Use the documented model directory name (or a symlink) to preserve the sampling profile.')
+
 def plan(c,group,mode,out,baseline):
     worker=ROOT/'pipelines'/('rl_eval' if group=='rl' else 'qwen')
     initial_root=out if group=='qwen' else out/'input_baseline'
@@ -42,6 +53,7 @@ def main():
     commands=plan(c,a.group,a.mode,out,baseline)
     if a.dry_run:
         import json;print(json.dumps(commands,indent=2));return
+    validate_sampling_paths(c,a.group)
     if out.exists():raise FileExistsError('Use a NEW output directory; partial stages are preserved: '+str(out))
     gpu_ids=c['gpu_ids'].split(',')
     if len(gpu_ids)!=4 or len(set(gpu_ids))!=4 or any(not x.isdigit() for x in gpu_ids):raise ValueError('This historical profile requires four distinct numeric GPU IDs')

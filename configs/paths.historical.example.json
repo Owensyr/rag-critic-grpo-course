@@ -4,7 +4,7 @@
   "qwen": "models/Qwen2.5-7B-Instruct",
   "llama": "models/Llama-3.1-8B-Instruct",
   "weak": "models/Qwen2.5-0.5B-Instruct",
-  "sft": "private/weights/sft_merged",
+  "sft": "private/weights/Llama-3.1-8B-Instruct-CLM-SFT",
   "sft_adapter": "private/weights/sft_adapter",
   "sft_corpus": "private/sft/cft_train_10k.json",
   "rl_adapter": "private/weights/rl_adapter",

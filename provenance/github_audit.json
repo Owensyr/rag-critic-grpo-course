@@ -1,0 +1,42 @@
+{
+  "commit": "8edbdb9ad4a31c2cce13222de40f723974095b88",
+  "local_files": 138,
+  "remote_files": 138,
+  "truncated": false,
+  "missing": [],
+  "changed": [],
+  "extra": [],
+  "review_scope": {
+    "original_clean_checkout_static": "passed",
+    "original_clean_checkout_tests": 25,
+    "local_fixed_tests": 28,
+    "gpu_end_to_end": "not_run"
+  },
+  "findings": [
+    {
+      "id": "sampling_path",
+      "severity": "configuration",
+      "description": "Default SFT output path lacked llama; historical inference selected temperature 0.9 rather than 0.6.",
+      "local_fix": "Use Llama-3.1-8B-Instruct-CLM-SFT and validate model-family path routing before GPU loading."
+    },
+    {
+      "id": "manifest_line_endings",
+      "severity": "integrity",
+      "description": "Ten release hashes differed in a clean Git checkout due to line-ending normalization.",
+      "local_fix": "Enforce LF for public text, preserve sealed historical bytes, reseal manifest, add --verify-manifest."
+    },
+    {
+      "id": "local_model_exclusion",
+      "severity": "validation",
+      "description": "check_release scanned ignored root models directory and would reject downloaded weights.",
+      "local_fix": "Exclude local root models, with regression test."
+    }
+  ],
+  "remote_updated_by_this_review": false,
+  "notes": [
+    "Remote main and local HEAD matched before local fixes; fixes are pending local changes, not yet pushed.",
+    "Clean checkout reconstructed from the identical local commit tree; all 138 remote Git blob IDs compared.",
+    "README clone command now contains the actual repository URL.",
+    "Requires external course test/template, access to Llama base weights, Linux and four GPUs; no private asset pack required."
+  ]
+}

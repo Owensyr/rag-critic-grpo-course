@@ -23,10 +23,10 @@
 
 历史 GPU 配置：**Linux、4 × RTX 3090 24 GB**。当前入口仍要求四张可见 GPU。建议主机至少 64 GB 内存；数据选择会载入单个作者 train 文件，CPU 合并 8B 模型也需要较多内存。基础模型、合并权重、16 轮 RL checkpoint 和中间回答需额外磁盘空间，建议预留约 100 GB 并按实际运行增加。
 
-以下命令都在仓库根目录执行。将第一行 URL 换成实际仓库地址：
+以下命令都在仓库根目录执行：
 
 ```bash
-git clone <本仓库地址> rag-critic-grpo-course
+git clone https://github.com/Owensyr/rag-critic-grpo-course.git
 cd rag-critic-grpo-course
 bash tools/setup_envs.sh
 cp configs/paths.example.json configs/paths.json
@@ -48,7 +48,7 @@ data/prepared/sft/                本次选出的 10K 训练问题
 data/prepared/grpo/               本次选出的 128 train + 128 dev
 runs/synthesis/                   弱回答、强回答、批判合成
 runs/sft_train/                   SFT 训练、适配器、日志
-runs/models/CLM8B-SFT/             合并后的 SFT 完整权重
+runs/models/Llama-3.1-8B-Instruct-CLM-SFT/             合并后的 SFT 完整权重
 runs/grpo/                        GRPO 训练、step016 适配器、开发集报告
 runs/*_full/                      四组评测输出及 CSV
 ```
@@ -182,10 +182,19 @@ tail -f runs/sft_train/logs/driver.log
 "$TRAIN_PY" tools/merge_sft.py --config configs/paths.json \
   --adapter runs/sft_train/artifacts/full \
   --corpus runs/synthesis/artifacts/full/cft_train_10k.json \
-  --output runs/models/CLM8B-SFT
+  --output runs/models/Llama-3.1-8B-Instruct-CLM-SFT
 ```
 
 输出完整 BF16 模型、tokenizer 和 `merge_manifest.json`。合并检查参数有限、抽样层发生变化，并保存模型来源及文件哈希。只想做 SFT 组可以跳过下一节 GRPO。
+
+请保留默认合并目录名中的 `Llama`。历史推理代码按模型路径选择采样参数：LLaMA 为 temperature=0.6、top_p=0.9，Qwen 为 0.7、0.8。便携评测入口会检查路径是否落入预期分支；不要把它随意缩写成 `CLM8B-SFT`，否则旧代码会选择默认 temperature=0.9。若已经合并到旧目录，在 Linux 上可建立符号链接，无需重训：
+
+```bash
+# 仅当旧目录已存在、右侧新链接尚不存在时执行
+ln -s CLM8B-SFT runs/models/Llama-3.1-8B-Instruct-CLM-SFT
+```
+
+同时确认 `configs/paths.json` 的 `sft` 指向带 `Llama` 的新路径。对已有配置手工更新这一项，不要覆盖其他本机路径。
 
 ## 6. 在自己的 SFT CLM8B 上训练 GRPO
 
@@ -276,7 +285,7 @@ python3 tools/export_submission.py \
 ## 8. 检查、结果与历史备份
 
 ```bash
-python3 tools/check_release.py
+python3 tools/check_release.py --verify-manifest
 python3 -m unittest discover -s tests -v
 ```
 

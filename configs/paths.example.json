@@ -4,7 +4,7 @@
   "qwen": "models/Qwen2.5-7B-Instruct",
   "llama": "models/Llama-3.1-8B-Instruct",
   "weak": "models/Qwen2.5-0.5B-Instruct",
-  "sft": "runs/models/CLM8B-SFT",
+  "sft": "runs/models/Llama-3.1-8B-Instruct-CLM-SFT",
   "sft_adapter": "runs/sft_train/artifacts/full",
   "sft_corpus": "runs/synthesis/artifacts/full/cft_train_10k.json",
   "rl_adapter": "runs/grpo/artifacts/checkpoints/step016",

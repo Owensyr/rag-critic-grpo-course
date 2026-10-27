@@ -10,7 +10,7 @@ ROOT=Path(__file__).resolve().parents[1]
 sys.path.insert(0,str(ROOT/'tools'))
 from common import save,load,sha
 from export_submission import export
-from evaluate import plan,validate_rows
+from evaluate import plan,validate_rows,validate_sampling_paths
 from prepare_workdir import prepare
 from collect_server_assets import collect
 
@@ -71,7 +71,42 @@ class PlanTests(unittest.TestCase):
         self.assertTrue(all(Path(j['cwd']).name=='qwen' for j in jobs))
         self.assertTrue(all('--gpu_memory_utilization' not in j['command'] for j in jobs))
 
+    def test_renamed_critic_cannot_silently_change_sampling(self):
+        c=dict(qwen='/models/Qwen2.5-7B-Instruct',sft='/runs/models/CLM8B-SFT')
+        with self.assertRaises(ValueError):validate_sampling_paths(c,'sft')
+        c['sft']='/runs/models/Llama-3.1-8B-Instruct-CLM-SFT'
+        validate_sampling_paths(c,'sft');validate_sampling_paths(c,'rl')
+        c['qwen']='/home/llama/models/Qwen2.5-7B-Instruct'
+        with self.assertRaises(ValueError):validate_sampling_paths(c,'qwen')
+
+    def test_default_profiles_execute_historical_sampling_branches(self):
+        import ast
+        from types import SimpleNamespace
+        from common import configuration
+        config=configuration(ROOT/'configs/paths.example.json')
+        for group in ('qwen','frozen','sft','rl'):validate_sampling_paths(config,group)
+        for worker in ('qwen','rl_eval'):
+            source=ROOT/'pipelines'/worker/'eval/inference_vllm.py'
+            function=next(n for n in ast.parse(source.read_text(encoding='utf-8')).body
+                          if isinstance(n,ast.FunctionDef) and n.name=='init_generator')
+            ns={'torch':SimpleNamespace(cuda=SimpleNamespace(device_count=lambda:4)),
+                'LLM':lambda **kw:kw,'SamplingParams':lambda **kw:kw,'engine_options':lambda phase:{}}
+            exec(compile(ast.Module(body=[function],type_ignores=[]),str(source),'exec'),ns)
+            args=SimpleNamespace(seed=42,max_model_len=32768,gpu_memory_utilization=.85,max_tokens=5120,phase=2)
+            _,params=ns['init_generator'](config['sft'],args)
+            self.assertEqual((params['temperature'],params['top_p']),(.6,.9))
+
 class PrepareTests(unittest.TestCase):
+    def test_release_check_allows_locally_downloaded_ignored_models(self):
+        from unittest.mock import patch
+        import check_release
+        with tempfile.TemporaryDirectory() as tmp:
+            d=Path(tmp);save(d/'provenance/source_inventory.json',{'copied_without_modification':[]})
+            (d/'README.md').write_text('Local checkout')
+            (d/'models').mkdir();(d/'models/model.safetensors').write_bytes(b'local untracked weights')
+            with patch.object(check_release,'ROOT',d),patch.object(sys,'argv',['check_release.py']):
+                check_release.main()
+
     def test_new_corpus_requires_explicit_acceptance_and_removes_stale_counts(self):
         with tempfile.TemporaryDirectory() as tmp:
             d=Path(tmp);corpus=d/'corpus.json';save(corpus,[dict(instruction='q',input='weak',output='feedback') for _ in range(10000)])

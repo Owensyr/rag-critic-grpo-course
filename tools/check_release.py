@@ -3,17 +3,20 @@ import argparse,ast,json,re
 from pathlib import Path
 from common import ROOT,load,save,sha
 def main():
-    ap=argparse.ArgumentParser(description=__doc__);ap.add_argument('--write-report',action='store_true');a=ap.parse_args()
+    ap=argparse.ArgumentParser(description=__doc__);ap.add_argument('--write-report',action='store_true')
+    ap.add_argument('--verify-manifest',action='store_true',help='Also verify every published file against release_files.json')
+    a=ap.parse_args()
+    if a.write_report and a.verify_manifest:ap.error('Write the report before sealing the manifest; verify it afterwards')
     copied=load(ROOT/'provenance/source_inventory.json')['copied_without_modification']
     for row in copied:
         if sha(ROOT/row['path'])!=row['sha256']:raise ValueError('Historical source modified: '+row['path'])
     compiled=0
     for p in ROOT.rglob('*.py'):
-        if p.relative_to(ROOT).parts[0]=='data' or any(x in p.relative_to(ROOT).parts for x in ['private','runs','.git','__pycache__']):continue
+        if p.relative_to(ROOT).parts[0] in ('data','models') or any(x in p.relative_to(ROOT).parts for x in ['private','runs','.git','__pycache__']):continue
         ast.parse(p.read_text(encoding='utf-8-sig'),filename=str(p));compiled+=1
     forbidden=[];secrets=[]
     for p in ROOT.rglob('*'):
-        if not p.is_file() or p.relative_to(ROOT).parts[0]=='data' or any(x in p.relative_to(ROOT).parts for x in ['private','runs','.git','__pycache__']):continue
+        if not p.is_file() or p.relative_to(ROOT).parts[0] in ('data','models') or any(x in p.relative_to(ROOT).parts for x in ['private','runs','.git','__pycache__']):continue
         if p.suffix in {'.safetensors','.bin','.pt','.arrow','.tar','.gz','.zip','.docx','.pptx'}:forbidden.append(str(p.relative_to(ROOT)))
         if p.suffix in {'.py','.json','.md','.txt','.yaml','.sh'}:
             text=p.read_text(encoding='utf-8-sig')
@@ -27,9 +30,16 @@ def main():
             if target==ROOT/'provenance/release_validation.json' and a.write_report:continue
             if not target.exists():broken.append((p.name,link))
     if broken:raise ValueError({'broken_links':broken})
+    manifest_count=0
+    if a.verify_manifest:
+        manifest=load(ROOT/'provenance/release_files.json')['files_sha256']
+        bad=[n for n,h in manifest.items() if not (ROOT/n).is_file() or sha(ROOT/n)!=h]
+        if bad:raise ValueError({'release_manifest_mismatch':bad})
+        manifest_count=len(manifest)
     result={'status':'passed','historical_files_verified':len(copied),'python_files_syntax_checked':compiled,
             'forbidden_public_files':forbidden,'secret_pattern_hits':secrets,'broken_document_links':broken,
             'scope':'Static CPU checks only. Historical GPU runs are independently recorded; portable GPU rerun has not been performed here.'}
+    if a.verify_manifest:result['release_manifest_files_verified']=manifest_count
     if a.write_report:save(ROOT/'provenance/release_validation.json',result)
     print(json.dumps(result,ensure_ascii=False,indent=2))
 if __name__=='__main__':main()
