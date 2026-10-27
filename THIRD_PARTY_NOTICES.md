@@ -6,5 +6,3 @@
 4. [DeepRAG](https://arxiv.org/abs/2502.01142) 作为奖励设计思路参考；最终实验采用 outcome-only 奖励，没有实现检索次数惩罚，不能称为对其奖励公式的原样复现。
 5. 模型权重分别遵循 [Qwen 模型页](https://huggingface.co/Qwen/Qwen2.5-7B-Instruct) 与 [LLaMA 模型页](https://huggingface.co/meta-llama/Llama-3.1-8B-Instruct) 的许可和获取要求。课程数据与作者数据仍来自各自的数据来源。
 6. 本次读取的上游仓库根目录未展示独立 LICENSE 文件。因此没有把整套含上游来源的代码擅自标注为本团队 MIT 授权；保留来源说明不等同于取得新的授权。
-
-师兄的课程报告与 PPT 仅用于了解章节组织方式，不随仓库分发；没有复制其成员信息、实验数值或未验证的论断。项目自己的人员贡献表由实际参与者填写。
